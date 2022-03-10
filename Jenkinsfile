@@ -24,8 +24,8 @@ pipeline {
             }
             steps {
                 script {
-                  sh 'cd ./docker/app/'
                     docker.withRegistry('', 'docker-hub') {
+                        sh 'cd ./docker/app/'
                         def customImage = docker.build("riyaz1994/golang:$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH")
                         customImage.push()
                     }
