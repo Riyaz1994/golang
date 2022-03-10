@@ -24,4 +24,4 @@ RUN apk --no-cache add tzdata bash \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/*
 
-ENTRYPOINT ["/docker/app/files/docker/bin/entrypoint.sh"]
+ENTRYPOINT ["/docker/bin/entrypoint.sh"]
